@@ -11,10 +11,7 @@ on:
 
 jobs:
   commitlint:
-    runs-on: [self-hosted, docker]
     name: Check commit message format
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v5
+      - uses: scaule/action-conventional-commits@master
